@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import DeleteModal from "../components/DeleteModal";
 
-export default function gridLayout() {
+export default function GridLayout() {
   const variant = useBreakpointValue({ base: 6, md: 5, lg: 7 });
   const inputlist = [
     {
@@ -224,6 +224,7 @@ export default function gridLayout() {
       {list.map((item) => {
         return (
           <Grid
+            key={item.length}
             h={{
               base: "1000px", // 0-48em
               md: "700px", // 48em-80em,
@@ -254,6 +255,7 @@ export default function gridLayout() {
                 {item[0].label}
               </Text>
               <Image
+                alt=""
                 borderRadius={10}
                 src={item[0].url}
                 width="100%"
@@ -273,6 +275,7 @@ export default function gridLayout() {
                 {item[1].label}
               </Text>
               <Image
+                alt=""
                 borderRadius={10}
                 src={item[1].url}
                 width="100%"
@@ -291,6 +294,7 @@ export default function gridLayout() {
                 {item[item.length === 7 ? 3 : 2].label}
               </Text>
               <Image
+                alt=""
                 borderRadius={10}
                 src={item[item.length === 7 ? 3 : 2].url}
                 width="100%"
@@ -308,6 +312,7 @@ export default function gridLayout() {
                 {item[0].label}
               </Text>
               <Image
+                alt=""
                 borderRadius={10}
                 src={item[0].url}
                 width="100%"
@@ -327,6 +332,7 @@ export default function gridLayout() {
                   {item[5].label}
                 </Text>
                 <Image
+                  alt=""
                   borderRadius={10}
                   src={item[5].url}
                   width="100%"
@@ -345,6 +351,7 @@ export default function gridLayout() {
                 {item[item.length - 2].label}
               </Text>
               <Image
+                alt=""
                 borderRadius={10}
                 src={item[item.length - 2].url}
                 width="100%"
@@ -362,6 +369,7 @@ export default function gridLayout() {
                 {item[item.length - 1].label}
               </Text>
               <Image
+                alt=""
                 borderRadius={10}
                 src={item[item.length - 1].url}
                 boxSize="100%"
