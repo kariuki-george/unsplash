@@ -12,12 +12,7 @@ import Image from "next/image";
 function Navbar({ submit }) {
   return (
     <Flex w="100%" p="1em" align="center">
-      <Image
-        src="/my_unsplash_logo.svg"
-        width={150}
-        height={70}
-        rel="noreferer"
-      />
+      <Image src="/my_unsplash_logo.svg" width={150} height={70} alt="logo" />
       <Spacer />
       <InputGroup w={{ base: "35vw", md: "300px" }}>
         <InputLeftElement pointerEvents="none" />

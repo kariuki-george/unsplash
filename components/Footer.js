@@ -16,7 +16,7 @@ function Footer() {
         <a
           href="https://devchallenges.io/portfolio/smiley-geek"
           target="_blank"
-          rel="noreferer"
+          rel="noreferrer"
         >
           Kariuki George
         </a>{" "}
