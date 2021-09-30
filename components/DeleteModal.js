@@ -13,11 +13,22 @@ import {
 } from "@chakra-ui/react";
 import { useDisclosure, Button, Text } from "@chakra-ui/react";
 
-function DeleteModal() {
+function DeleteModal({ display, id, handleDelete }) {
   const { onOpen, isOpen, onClose } = useDisclosure();
+  const [password, setPassword] = React.useState("");
   return (
     <div>
-      <Button onClick={onOpen} colorScheme="red" variant="outline">
+      <Button
+        position="absolute"
+        top="2px"
+        right="5px"
+        onClick={onOpen}
+        colorScheme="red"
+        display={display}
+        variant="outline"
+        w="60px"
+        h="30px"
+      >
         delete
       </Button>
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -26,7 +37,13 @@ function DeleteModal() {
           <ModalHeader>Are you sure?</ModalHeader>
           <ModalBody>
             <FormLabel>Password</FormLabel>
-            <Input type="password" />
+            <Input
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              type="password"
+            />
           </ModalBody>
           <ModalFooter>
             <Button
@@ -37,7 +54,17 @@ function DeleteModal() {
             >
               Cancel
             </Button>
-            <Button variant="solid" colorScheme="red">
+            <Button
+              variant="solid"
+              colorScheme="red"
+              onClick={() => {
+                if (password === "password") {
+                  handleDelete(id);
+                  onClose();
+                }
+                setPassword("");
+              }}
+            >
               Delete
             </Button>
           </ModalFooter>
