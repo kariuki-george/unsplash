@@ -10,7 +10,6 @@ export default function Home({ res }) {
   const [inputlist, setInputlist] = useState(res);
 
   const submit = async (data) => {
-    console.log(`${process.env.NEXT_PUBLIC_API_URL}/createimage`);
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/createimage`,
       data
@@ -48,7 +47,7 @@ export async function getServerSideProps(context) {
   const url = process.env.NEXT_PUBLIC_API_URL;
 
   const response = await axios.get(url);
-  console.log(response);
+
   if (!response.data) {
     res = [];
   } else {
