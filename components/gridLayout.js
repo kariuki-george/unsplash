@@ -13,7 +13,7 @@ import DeleteModal from "../components/DeleteModal";
 export default function GridLayout({ inputlist, handleDelete }) {
   const variant = useBreakpointValue({ base: 6, md: 5, lg: 7 });
 
-  const [list, setList] = useState(inputlist.slice(0, 6));
+  // const [list, setList] = useState(inputlist.slice(0, 6));
   const [remainList, setRemainList] = useState(
     inputlist
     // inputlist.slice(6, inputlist.length - 1)
@@ -211,7 +211,7 @@ Change grid layout according to changes in window size
           </GridItem>
         </Grid>
       </Box> */}
-      {list.length === 0 && <Text color="red">No images to display</Text>}
+      {remainList.length === 0 && <Text color="red">No images to display</Text>}
       <Box h="100%" w="100vw">
         <Grid
           w="100vw"

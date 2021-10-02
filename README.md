@@ -34,7 +34,7 @@
 
 ## Overview
 
-![screenshot](https://res.cloudinary.com/smiley-geek/image/upload/v1632650082/je1qjqqdbyytr3pelyqw.png)
+![screenshot](https://res.cloudinary.com/smiley-geek/image/upload/v1633189259/xgcx4jhnvdvjg7yqm1jz.png)
 
 My project is hosted on [vercel](https://unsplashbythuo.vercel.app/)
 
