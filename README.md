@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://unsplashbythuo.vercel.app/">
+    <a href="https://unsplashbythuo.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -36,7 +36,9 @@
 
 ![screenshot](https://res.cloudinary.com/smiley-geek/image/upload/v1633189259/xgcx4jhnvdvjg7yqm1jz.png)
 
-My project is hosted on [vercel](https://unsplashbythuo.vercel.app/)
+My project is hosted on [netlify](https://unsplashbythuo.netlify.app/)
+
+My backend is hosted onn heroku.
 
 The data is stored in [mongodb cloud](https://cloud.mongodb.com/).
 
